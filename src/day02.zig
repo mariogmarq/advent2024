@@ -19,7 +19,7 @@ fn report_is_safe(numbers: []const i32) anyerror!bool {
             is_safe = false;
         }
 
-        if (((previous_number.? - num) * std.math.sign(previous_number.? - num)) > 3 or ((previous_number.? - num) == 0)) {
+        if (@abs(previous_number.? - num) > 3 or ((previous_number.? - num) == 0)) {
             is_safe = false;
         }
 

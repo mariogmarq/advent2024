@@ -29,7 +29,7 @@ pub fn part_one(numbers: []u8, alloc: std.mem.Allocator) anyerror!i32 {
 
     var total_distance = @as(i32, 0);
     for (first_list.items, second_list.items) |a, b| {
-        total_distance += (a - b) * std.math.sign(a - b);
+        total_distance += @abs(a - b);
     }
 
     return total_distance;
