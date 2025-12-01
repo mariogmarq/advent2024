@@ -1,3 +1,3 @@
 # Advent of Code 2024
 
-This year done in zig :)
+This year tried 2 days in zig and moved to python :(
